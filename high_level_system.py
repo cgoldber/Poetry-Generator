@@ -4,6 +4,8 @@ import numpy as np
 import random
 import os
 from datetime import datetime
+from word2vec import MyWord2Vec
+from scrape_reddit import ScrapeReddit
 
 
 """ Contains the traditional Sonnet rhyme scheme, where each element of the
@@ -28,6 +30,8 @@ class GeneratorSystem():
 
     Methods
     -------
+    populate_models():
+        Trains large bigram and Word2Vec Model
     write_poems_to_files():
         Writes the final poem, metrics, and reference article information to
         time-stamped files.
@@ -51,6 +55,18 @@ class GeneratorSystem():
         self.n_poems = n_poems
         self.ref_article = None
         self.poems = []
+        #self.populate_models() #UNCOMMENT TO TRAIN LARGER MODELS
+    
+    def populate_models(self):
+        """ Creates a new word2vec and bigram model (takes a very long time
+            to run so only do it once, the models will save to nlp_models
+            folder).
+        """
+        my_word2vec = MyWord2Vec() 
+        my_word2vec.make_poetry_base()
+
+        scrape_reddit = ScrapeReddit()
+        scrape_reddit.reset_model()
 
     def write_poems_to_files(self):
         """ Creates a folder for all of the files related to this running of
