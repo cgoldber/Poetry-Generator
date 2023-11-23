@@ -20,7 +20,7 @@ Users must install (can use pip3 install) requests, bs4 for Beuatiful Soup, Text
 ### Instructions
 To generate their own poem, users must be in the Poetry Generator Folder and run high_level_system.py. They will
 be instructed to select a category of news. After that, they only have to sit and wait for their poetry to be 
-generated! They can find their poems in the generated_poems folder in the folder corresponding to the timestamp
+generated! They can find their poems in the generated_poems folder, under the subfolder corresponding to the timestamp
 of when the code stopped running. In that subfolder, they will find the generated poem, the corresponding poem
 metrics, and the reference article.
 
