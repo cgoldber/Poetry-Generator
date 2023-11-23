@@ -1,4 +1,4 @@
-### Title: The Odient
+# Title: The Odient
 
 ## Description 
 In a world where we often become desensitized to the constant onslaught of news, the Odient challenges
@@ -14,10 +14,10 @@ Users can access a local website where a few news headlines are displayed. The u
 interest and the poem will be displayed and read aloud, along with the description of the inspiring news article.
 
 ## Running the Code
-# Installations
+### Installations
 Users must install requests, bs4 for Beuatiful Soup, TextBlob, spacy (specificlly must install the en_core_web_sm data), pronouncing, gensim, and language-tool-python
 
-# Instructions
+### Instructions
 To generate their own poem, users must be in the Poetry Generator Folder and run high_level_system.py. They will
 be instructed to select a category of news. After that, they only have to sit and wait for their poetry to be 
 generated! They can find their poems in the generated_poems folder in the folder corresponding to the timestamp
