@@ -1,7 +1,7 @@
 # Title: The Odient
 
 ## Description 
-In a world where we often become desensitized to the constant onslaught of news, the Odient challenges users to reflect deeper on the news they read through the lense of poetry. Users can choose a news category, and the system randomly selects a recent article (extracted from NewsAPI) and generates a Sonnet that is inspired by it. 
+In a world where we often become desensitized to the constant onslaught of news, the Odient challenges users to reflect deeper on the news we consume through the lense of poetry. Users can choose a news category, and the system randomly selects a recent article (extracted from NewsAPI) and generates a Sonnet that is inspired by it. 
 
 The system begins constructing poems by extracting random lines from various poems in a dataset (extracted from PoetryDB API). Nouns, adjectives, and verbs are then replaced with words from the chosen news article, weighted by their frequency and lack of prevalence in other texts. A rhyming scheme is also imposed to ensure the poem adheres to the structure of a Sonnet.
 
