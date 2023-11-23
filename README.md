@@ -15,7 +15,7 @@ interest and the poem will be displayed and read aloud, along with the descripti
 
 ## Running the Code
 ### Installations
-Users must install requests, bs4 for Beuatiful Soup, TextBlob, spacy (specificlly must install the en_core_web_sm data), pronouncing, gensim, and language-tool-python
+Users must install (can use pip3 install) requests, bs4 for Beuatiful Soup, TextBlob, spacy (specificlly must install the en_core_web_sm data), pronouncing, gensim, and language-tool-python
 
 ### Instructions
 To generate their own poem, users must be in the Poetry Generator Folder and run high_level_system.py. They will
