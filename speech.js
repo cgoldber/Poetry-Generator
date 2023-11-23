@@ -56,15 +56,12 @@ function displayPoem(articleTitle, articleDescription, poemText) {
   var poemContainer = document.getElementById('poem-container');
   var lines = poemText.split('\n');
 
-  // Clear previous content
   poemContainer.innerHTML = '';
 
-  // Display article title
+  // Display article title and description
   var titleElement = document.createElement('div');
   titleElement.textContent = 'Article Title: ' + articleTitle;
   poemContainer.appendChild(titleElement);
-
-  // Display article description
   var descriptionElement = document.createElement('div');
   descriptionElement.textContent = 'Article Description: ' + articleDescription;
   poemContainer.appendChild(descriptionElement);
@@ -73,21 +70,19 @@ function displayPoem(articleTitle, articleDescription, poemText) {
   var hrElementDescription = document.createElement('hr');
   poemContainer.appendChild(hrElementDescription);
 
-  // Add spacing between description and poem
   poemContainer.appendChild(document.createElement('br'));
 
-  // Display the first line of the poem with extra spacing
   if (lines.length > 0) {
     var firstLineElement = document.createElement('div');
     firstLineElement.textContent = lines[0];
     poemContainer.appendChild(firstLineElement);
   }
 
-  // Add a horizontal line after the first line of the poem
+
   var hrElement = document.createElement('hr');
   poemContainer.appendChild(hrElement);
 
-  // Add spacing between the first line and the rest of the poem
+
   poemContainer.appendChild(document.createElement('br'));
 
   // Display the rest of the poem with a line break
@@ -95,7 +90,7 @@ function displayPoem(articleTitle, articleDescription, poemText) {
     var lineElement = document.createElement('div');
     lineElement.textContent = lines[i];
 
-    // If the line is empty, add an extra line break for spacing
+
     if (lines[i].trim() === '' && i !== lines.length - 1) {
       poemContainer.appendChild(document.createElement('div'));
     }
@@ -105,7 +100,7 @@ function displayPoem(articleTitle, articleDescription, poemText) {
 }
 
 
-// Function to speak a given text
+// speak a given text
 function sayPoem(poemText) {
   console.log('Attempting to read poem...');
 
@@ -113,18 +108,16 @@ function sayPoem(poemText) {
   synthesis.speak(utterance);
 }
 
-// Function to stop the audio
+// stop the audio
 function stopAudio() {
   console.log('Stopping audio...');
   synthesis.cancel();
 }
 
-// Function to create buttons dynamically
+// Function to create buttons 
 function createButtons() {
   var buttonContainer = document.getElementById('button-container');
   var folders = ['2023-11-19_18:17:13', '2023-11-20_20:23:17', 
-  '2023-11-20_20:15:55', '2023-11-20_23:10:36', 
-  '2023-11-20_23:53:43', '2023-11-21_08:26:43', '2023-11-21_09:04:57',
   '2023-11-20_15:37:29', '2023-11-21_09:31:27', '2023-11-21_10:15:17']; // Add folder names as needed
 
   folders.forEach(function (folderName) {
