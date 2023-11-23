@@ -1,12 +1,11 @@
 # Title: The Odient
 
 ## Description 
-In a world where we often become desensitized to the constant onslaught of news, the Odient challenges
-users to reflect deeper on the news they read through the lense of poetry. Users can choose a news category, and the system randomly selects a recent article and generates a Sonnet that is inspired by it. 
+In a world where we often become desensitized to the constant onslaught of news, the Odient challenges users to reflect deeper on the news they read through the lense of poetry. Users can choose a news category, and the system randomly selects a recent article (extracted from NewsAPI) and generates a Sonnet that is inspired by it. 
 
-The system begins constructing poems by extracting random lines from various poems in a dataset. Nouns, adjectives, and verbs are then replaced with words from the chosen news article, weighted by their frequency and lack of prevalence in other texts. A rhyming scheme is also imposed to ensure the poem adheres to the structure of a Sonnet.
+The system begins constructing poems by extracting random lines from various poems in a dataset (extracted from PoetryDB API). Nouns, adjectives, and verbs are then replaced with words from the chosen news article, weighted by their frequency and lack of prevalence in other texts. A rhyming scheme is also imposed to ensure the poem adheres to the structure of a Sonnet.
 
-Then, the poems are processed by a genetic algorithm, where they are crossed over and potentially mutated. This includes swapping semantically similar words, utilizing bigrams extracted from Reddit posts to replace parts of lines, and employing a language correction tool on selected lines. The fittest poems from both the old and new generations are retained for the next iteration.
+Then, the poems are processed by a genetic algorithm, where they are crossed over and potentially mutated. This includes swapping semantically similar words, utilizing bigrams extracted from Reddit posts (using Beautiful Soup scraping) to replace parts of lines, and employing a language correction tool on selected lines. The fittest poems from both the old and new generations are retained for the next iteration.
 
 Evaluation criteria include article alignment (sentiment analysis, preservation of keywords), quality of content (grammar checks, coherence with bigrams, simile inclusion), and sound (alliteration, assonance, and rhyme).
 
