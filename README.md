@@ -23,6 +23,10 @@ generated! They can find their poems in the generated_poems folder, under the su
 of when the code stopped running. In that subfolder, they will find the generated poem, the corresponding poem
 metrics, and the reference article.
 
+The runtime bottleneck of this system is training the large Word2Vec and bigram models. Uncomment the call to populate_models() in high_level_system.py to train the models and expect it will take a long time. Afterwards, the model
+will save to the nlp_models folder. Therefore, after running it once, you can recomment the call to populate_models and
+run the poetry generation much faster.
+
 To access the poetry display, users can run a local Python server by typing python -m http.server in the terminal.
 Then, they can head to http://localhost:8000/speech.html on their browser of choice to access the display. To hear
 a poem, they only have to click on the news article headline. To stop the poem reading, they can click the red stop
