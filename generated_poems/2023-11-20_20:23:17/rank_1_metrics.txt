@@ -1,0 +1,10 @@
+total fitness: 2.6390439377297823
+
+sentiment difference: 0.08438149331090095 (score = -0.0011082766439909277)
+grammar score: 1.7083333333332387
+simile score: 0.21428571428571427
+coherence score: 2.997014925373134
+alliteration score: 0.06422018348623854
+assonance score: 0.2018348623853211
+article keyword score: 1.3495934959349594
+rhyme score: 1.0
