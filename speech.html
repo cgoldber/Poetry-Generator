@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Speech Interaction</title>
+    <meta charset="utf-8">
+    <style>
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+      }
+
+      #container {
+        text-align: center;
+        max-width: 800px;
+        width: 100%;
+        margin: 0 auto;
+      }
+
+      #poem-container {
+        text-align: left;
+        max-width: 600px;
+        width: 100%;
+        margin: 0 auto;
+      }
+
+      #button-container {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+      }
+
+      .article-title {
+        font-size: 1.2em;
+        font-weight: bold;
+      }
+
+      .article-description {
+        margin-top: 10px;
+        font-style: italic;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="button-container"></div>
+    <div id="container">
+      <div class="article-title" id="article-title"></div>
+      <div class="article-description" id="article-description"></div>
+      <div id="poem-container"></div>
+    </div>
+    <script src="speech.js"></script>
+  </body>
+</html>
+
+
